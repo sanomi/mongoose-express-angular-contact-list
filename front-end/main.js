@@ -2,7 +2,6 @@ var list = angular.module('contactList', ['ui.router']);
 
 list.controller('userController', function($scope, $http){
 	$http.get('http://localhost:3000/users').then(function(data){
-		console.log(data.data)
 		$scope.userList = data.data
 	})
 	$scope.addUser = function(){
@@ -11,8 +10,15 @@ list.controller('userController', function($scope, $http){
 	.then(function(data){
 		console.log(data)
 		$scope.message = 'Success!';
+		$http.get('http://localhost:3000/users').then(function(data){
+			$scope.userList = data.data
+		})
 	}).catch(function(e){
 		console.log(e);
 	})
 	}
+})
+
+list.service('getUsers', function($scope,$http){
+
 })
