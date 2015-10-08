@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.1/angular.min.js'></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js'></script>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body ng-app='contactList', ng-controller='userController'>
+
+	<input ng-model='newUser' type='text'>
+	<button ng-click='addUser()'>ADD</button>
+	{{message}}
+<!-- <ui-view>
+</ui-view> -->
+<script src='main.js'></script>
+</body>
+</html>
