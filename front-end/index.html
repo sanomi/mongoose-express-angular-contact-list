@@ -13,6 +13,10 @@
 	<input ng-model='newUser.email' type='text' placeholder='email'>
 	<button ng-click='addUser()'>ADD</button>
 	{{message}}
+	<p>Users:</p>
+	<ul ng-repeat='user in userList'>
+		<li>{{user.name}}: {{user.email}}</li>
+	</ul>
 <!-- <ui-view>
 </ui-view> -->
 <script src='main.js'></script>

@@ -3,7 +3,9 @@ var router = express.Router();
 var User = require('../models/userModel.js')
 
 router.get('/', function(req, res, next) {
-  res.send('received');
+	User.find({}, function(err, users){
+  res.send(users);
+	})
 });
 
 router.post('/', function(req, res, next) {
