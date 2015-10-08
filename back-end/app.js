@@ -10,8 +10,8 @@ var users = require('./routes/users');
 
 var app = express();
 
-// var Mongoose = require('mongoose');
-// Mongoose.connect('mongodb://localhost/testdb');
+var Mongoose = require('mongoose');
+Mongoose.connect('mongodb://localhost/testdb');
 
 var CORS = (function(req,res,next) {
   res.header("Access-Control-Allow-Origin", "*");

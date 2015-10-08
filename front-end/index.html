@@ -9,7 +9,8 @@
 </head>
 <body ng-app='contactList', ng-controller='userController'>
 
-	<input ng-model='newUser' type='text'>
+	<input ng-model='newUser.name' type='text' placeholder='name'>
+	<input ng-model='newUser.email' type='text' placeholder='email'>
 	<button ng-click='addUser()'>ADD</button>
 	{{message}}
 <!-- <ui-view>
