@@ -16,6 +16,7 @@
 	<p>Users:</p>
 	<ul ng-repeat='user in userList'>
 		<li>{{user.name}}: {{user.email}}</li>
+		<button ng-click='deleteUser(user)'>Delete</button>
 	</ul>
 <!-- <ui-view>
 </ui-view> -->

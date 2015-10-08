@@ -17,4 +17,11 @@ router.post('/', function(req, res, next) {
 	})
 });
 
+router.delete('/:userId', function(req,res,next){
+	console.log('req.params', req.params);
+	User.findByIdAndRemove(req.params.userId, function(err, deletedUser){
+	res.send();
+	})
+})
+
 module.exports = router;
